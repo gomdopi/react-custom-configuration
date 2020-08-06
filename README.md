@@ -4,6 +4,7 @@
 ```console
 $ mkcd dir-name 
 ```
+
 ---
 **NOTE**
 ```console
