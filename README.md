@@ -1,7 +1,6 @@
 # Steps for creating your own React app from scratch with basic configuration
 
 ## Create and move into your app directory
-
 ```
 $ mkcd {dir-name} 
 ```
@@ -9,7 +8,10 @@ $ mkcd {dir-name}
 > 
 >(https://github.com/gomdopi/dev-env-setup/blob/master/zsh/scripts.zsh)
 
-
+## Initialize NPM
+```
+$ npm init -y
+```
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
