@@ -1,10 +1,15 @@
 # Steps for creating your own React app from scratch with basic configuration
+
 ## Create your app directory
 
 ```console
-$ mkcd dir-name 
+$ mkcd {dir-name} 
 ```
-> alias mkcd='abc() { mkdir -p "$1"; cd "$1"; }; abc'
+> mkcd = mkdir && cd
+> 
+>(https://github.com/gomdopi/dev-env-setup/blob/master/zsh/scripts.zsh)
+
+
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
