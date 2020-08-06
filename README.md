@@ -2,7 +2,7 @@
 
 ## Create your app directory
 
-```console
+```
 $ mkcd {dir-name} 
 ```
 > mkcd = mkdir && cd
