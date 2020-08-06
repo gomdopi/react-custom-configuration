@@ -13,6 +13,11 @@ $ mkcd {dir-name}
 $ npm init -y
 ```
 
+## Install React
+```
+$ npm install react react-dom
+```
+
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
 
