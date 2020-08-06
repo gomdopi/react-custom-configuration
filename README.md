@@ -7,8 +7,9 @@ $ mkcd dir-name
 ---
 **NOTE**
 ```console
-alias mkcd='abc() { mkdir -p "$1"; cd "$1"; }; abc'
+$ alias mkcd='abc() { mkdir -p "$1"; cd "$1"; }; abc'
 ```
+---
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
