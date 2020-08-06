@@ -1,6 +1,6 @@
 # Steps for creating your own React app from scratch with basic configuration
 
-## Create your app directory
+## Create and move into your app directory
 
 ```
 $ mkcd {dir-name} 
