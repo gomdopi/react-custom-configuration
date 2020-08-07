@@ -200,7 +200,33 @@ module.exports = {
   "eslint-fix": “eslint --fix \"src/**/*.js\"", // the eslint script,
 },
 ```
+- Usage:
+```
+$ npm run eslint-fix
+```
 
+### CSS LESS
+#### Installation
+```
+$ npm install --save-dev less less-loader css-loader style-loader
+```
+
+#### Create basic files
+- Create `header.less` under `src/style/` like so:
+```
+.header {
+  background-color: #3d3d;
+}
+```
+
+- Create `main.less` under `src/style/` like so:
+```
+@import "header.less";
+@color: #f5adad;
+body {
+  background-color: @color;
+}
+```
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
