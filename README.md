@@ -54,6 +54,12 @@ $ npm run start
   </body>
 </html>
 ```
+> Make sure to place `index.html` in directory specified in `webpack.config.js`:
+```
+output: {
+  path: __dirname + '/dist',
+},
+```
 
 ##### index.js
 - Create `index.js` under `src` directory like so:
