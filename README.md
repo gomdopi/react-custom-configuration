@@ -76,7 +76,7 @@ ReactDOM.render(<Welcome />, document.getElementById("root"));
 $ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
 ```
 
-#### Creating/configuring basic files
+#### Create/configure basic files
 ##### webpack.config.js
 - Create `webpack.config.js` under root like so:
 ```
@@ -145,6 +145,62 @@ $ npx prettier --write "src/**/*.js"
 ```
 $ npm run format
 ```
+
+### Source Map
+- Add source map for better error logging:
+```
+module.exports = {
+  devtool: 'inline-source-map',
+  // … the rest of the config
+};
+```
+
+### ESLint
+#### Install ESLint
+```
+$ npm --save-dev install eslint eslint-loader babel-eslint eslint-config-react eslint-plugin-react
+```
+
+#### Configure webpack
+- Modify `webpack.config.js`:
+```
+module.exports = {
+  // modify the module
+  module: {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader', 'eslint-loader'] // include eslint-loader
+    }]
+  },
+};
+```
+
+#### Create config file
+- Create `.eslintrc` under root like so:
+```
+{
+  "parser": "babel-eslint",
+  "extends": "react",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
+```
+
+#### Add eslint script
+```
+"scripts": {
+  "eslint-fix": “eslint --fix \"src/**/*.js\"", // the eslint script,
+},
+```
+
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
