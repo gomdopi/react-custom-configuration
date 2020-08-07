@@ -240,6 +240,36 @@ body {
 import './style/main.less';
 ```
 
+### HTMLWebpackPlugin
+#### Installation
+```
+npm install --save-dev html-webpack-plugin
+```
+
+#### Configuration
+- Configure `webpack.config.js`:
+```
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+  entry: //…
+  output: {
+    //…
+  },
+  devServer: {
+    //…
+  },
+  module: {
+    //…
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve('./index.html'),
+    }),
+  ]
+};
+```
+
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
 
