@@ -276,7 +276,8 @@ module.exports = {
 ```
 
 ## Resources
-[First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
+[React App Set-up Tutorial](https://www.freecodecamp.org/news/how-to-set-up-deploy-your-react-app-from-scratch-using-webpack-and-babel-a669891033d4/)
 
-[Second website](https://www.freecodecamp.org/news/how-to-set-up-deploy-your-react-app-from-scratch-using-webpack-and-babel-a669891033d4/)
+[Integrating Prettier with Linters](https://prettier.io/docs/en/integrating-with-linters.html)
 
+[Integrating Prettier with IDEs](https://prettier.io/docs/en/editors.html)
