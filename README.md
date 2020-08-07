@@ -1,6 +1,6 @@
 # Steps for creating your own React app from scratch with basic configuration
 
-## Basics
+## Initialization/Installation
 ### Create and move into your app directory
 ```
 $ mkcd {dir-name} 
@@ -64,6 +64,49 @@ class Welcome extends React.Component {
 }
 
 ReactDOM.render(<Welcome />, document.getElementById("root"));
+```
+
+### Babel
+#### Install Babel
+```
+$ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader
+```
+
+#### Creating/configuring basic files
+### webpack.config.js
+Create `webpack.config.js` under root like so:
+```
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: './dist',
+  },
+  module: {
+    rules: [
+    {
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+    }
+    ]
+  },
+};
+```
+
+#### .babelrc
+Create `.babelrc` under root like so:
+```
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
 ```
 
 ## Resources
