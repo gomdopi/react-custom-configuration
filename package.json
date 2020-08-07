@@ -4,10 +4,11 @@
   "description": "## Create and move into your app directory",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "format": "prettier --write \"src/**/*.js\"",
-    "eslint-fix": "eslint --fix \"src/**/*.js\""
+    "start": "webpack-dev-server --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -35,6 +36,7 @@
     "eslint-config-react": "^1.1.7",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-react": "^7.20.5",
+    "html-webpack-plugin": "^4.3.0",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
     "prettier": "2.0.5",

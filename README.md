@@ -234,6 +234,12 @@ body {
 }
 ```
 
+#### Using the styles found in the less file(s)
+- Import `main.less` in `index.js`:
+```
+import './style/main.less';
+```
+
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
 
