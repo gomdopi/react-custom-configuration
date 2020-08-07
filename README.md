@@ -9,26 +9,26 @@ $ mkcd {dir-name}
 > 
 >(https://github.com/gomdopi/dev-env-setup/blob/master/zsh/scripts.zsh)
 
-## NPM
-### Initialize NPM
+### NPM
+#### Initialize NPM
 ```
 $ npm init -y
 ```
 
-## React
-### Install React
+### React
+#### Install React
 ```
 $ npm install react react-dom
 ```
 
-## Webpack
-### Install Webpack
+### Webpack
+#### Install Webpack
 ```
 $ npm install --save-dev webpack webpack-dev-server webpack-cli
 ```
 
-### Creating basic files
-#### Start script
+#### Creating basic files
+##### Start script
 Add following to `package.json`:
 ```
 "scripts": {
@@ -36,7 +36,7 @@ Add following to `package.json`:
    },
 ```
 
-#### index.html
+##### index.html
 Create `index.html` like so:
 ```
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ Create `index.html` like so:
 </html>
 ```
 
-#### index.js
+##### index.js
 Create `index.js` under `src` directory like so:
 ```
 import React from "react";
@@ -73,7 +73,7 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel
 ```
 
 #### Creating/configuring basic files
-### webpack.config.js
+##### webpack.config.js
 Create `webpack.config.js` under root like so:
 ```
 module.exports = {
@@ -98,7 +98,7 @@ module.exports = {
 };
 ```
 
-#### .babelrc
+##### .babelrc
 Create `.babelrc` under root like so:
 ```
 {
@@ -108,6 +108,8 @@ Create `.babelrc` under root like so:
   ]
 }
 ```
+
+
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
