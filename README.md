@@ -54,15 +54,15 @@ $ npm run start
   </body>
 </html>
 ```
-> Make sure to place `index.html` in directory specified in `webpack.config.js`:
+- Make sure to place `index.html` in directory specified in `webpack.config.js`:
 ```
 output: {
-  path: __dirname + '/dist',
+  path: path.resolve(__dirname , 'build'),
 },
 ```
 
 ##### index.js
-- Create `index.js` under `src` directory like so:
+- Create `index.js` in `src/` like so:
 ```
 import React from "react";
 import ReactDOM from "react-dom";
@@ -84,17 +84,17 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel
 
 #### Create/configure basic files
 ##### webpack.config.js
-- Create `webpack.config.js` under root like so:
+- Create `webpack.config.js` in root like so:
 ```
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/',
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './build',
   },
   module: {
     rules: [
@@ -109,7 +109,7 @@ module.exports = {
 ```
 
 ##### .babelrc
-- Create `.babelrc` under root like so:
+- Create `.babelrc` in root like so:
 ```
 {
   "presets": [
@@ -126,7 +126,7 @@ $ npm install --save-dev --save-exact prettier
 ```
 
 #### Create configuration file
-- Create `.prettierrc` under root like so:
+- Create `.prettierrc` in root like so:
 ```
 {
   "semi": true,
@@ -141,7 +141,8 @@ $ npm install --save-dev --save-exact prettier
 $ npx prettier --write "src/**/*.js"
 ```
 
-##### Add script
+##### Script
+- Add script to `package.json`
 ```
 "scripts": {
   "format": "prettier --write \"src/**/*.js\"",
@@ -183,7 +184,7 @@ module.exports = {
 ```
 
 #### Create config file
-- Create `.eslintrc` under root like so:
+- Create `.eslintrc` in root like so:
 ```
 {
   "parser": "babel-eslint",
@@ -218,14 +219,14 @@ $ npm install --save-dev less less-loader css-loader style-loader
 ```
 
 #### Create basic files
-- Create `header.less` under `src/style/` like so:
+- Create `header.less` in `src/style/` like so:
 ```
 .header {
   background-color: #3d3d;
 }
 ```
 
-- Create `main.less` under `src/style/` like so:
+- Create `main.less` in `src/style/` like so:
 ```
 @import "header.less";
 @color: #f5adad;
@@ -235,7 +236,7 @@ body {
 ```
 
 #### Using the styles found in the less file(s)
-- Import `main.less` in `index.js`:
+- Import `main.less` into `index.js`:
 ```
 import './style/main.less';
 ```
