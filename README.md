@@ -32,8 +32,12 @@ $ npm install --save-dev webpack webpack-dev-server webpack-cli
 Add following to `package.json`:
 ```
 "scripts": {
-    "start": "webpack-dev-server --mode development",
-   },
+  "start": "webpack-dev-server --mode development",
+},
+```
+- Usage:
+```
+$ npm run start
 ```
 
 ##### index.html
@@ -41,13 +45,13 @@ Create `index.html` like so:
 ```
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My React Configuration Setup</title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <script src="./dist/bundle.js"></script>
-    </body>
+  <head>
+    <title>My React Configuration Setup</title>
+  </head>
+  <body>     
+    <div id="root"></div>
+      <script src="./dist/bundle.js"></script>
+  </body>
 </html>
 ```
 
@@ -58,9 +62,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 class Welcome extends React.Component {
-    render() {
-        return <h1>Hello World from React boilerplate</h1>;
-    }
+  render() {
+    return <h1>Hello World from React boilerplate</h1>;
+  }
 }
 
 ReactDOM.render(<Welcome />, document.getElementById("root"));
@@ -109,7 +113,38 @@ Create `.babelrc` under root like so:
 }
 ```
 
+### Prettier
+#### Install Prettier
+```
+$ npm install --save-dev --save-exact prettier
+```
 
+#### Create configuration file
+Create `.prettierrc` under root like so:
+```
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+```
+
+#### Usage
+##### CLI
+```
+$ npx prettier --write "src/**/*.js"
+```
+
+##### Add script
+```
+"scripts": {
+  "format": "prettier --write \"src/**/*.js\"",
+},
+```
+- Usage:
+```
+$ npm run format
+```
 
 ## Resources
 [First website](https://www.codementor.io/@rajjeet/step-by-step-create-a-react-project-from-scratch-11s9skvnxv)
