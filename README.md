@@ -29,7 +29,7 @@ $ npm install --save-dev webpack webpack-dev-server webpack-cli
 
 #### Creating basic files
 ##### Start script
-Add following to `package.json`:
+- Add following to `package.json`:
 ```
 "scripts": {
   "start": "webpack-dev-server --mode development",
@@ -41,7 +41,7 @@ $ npm run start
 ```
 
 ##### index.html
-Create `index.html` like so:
+- Create `index.html` like so:
 ```
 <!DOCTYPE html>
 <html>
@@ -56,7 +56,7 @@ Create `index.html` like so:
 ```
 
 ##### index.js
-Create `index.js` under `src` directory like so:
+- Create `index.js` under `src` directory like so:
 ```
 import React from "react";
 import ReactDOM from "react-dom";
@@ -78,7 +78,7 @@ $ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel
 
 #### Creating/configuring basic files
 ##### webpack.config.js
-Create `webpack.config.js` under root like so:
+- Create `webpack.config.js` under root like so:
 ```
 module.exports = {
   entry: './src/index.js',
@@ -103,7 +103,7 @@ module.exports = {
 ```
 
 ##### .babelrc
-Create `.babelrc` under root like so:
+- Create `.babelrc` under root like so:
 ```
 {
   "presets": [
@@ -120,7 +120,7 @@ $ npm install --save-dev --save-exact prettier
 ```
 
 #### Create configuration file
-Create `.prettierrc` under root like so:
+- Create `.prettierrc` under root like so:
 ```
 {
   "semi": true,
