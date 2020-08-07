@@ -54,12 +54,16 @@ $ npm run start
   </body>
 </html>
 ```
-- Make sure to place `index.html` in directory specified in `webpack.config.js`:
+
+- Make sure `index.html` & `bundle.js` are in specified directory in `webpack.config.js`:
 ```
 output: {
   path: path.resolve(__dirname , 'build'),
+  filename: 'bundle.js'
 },
 ```
+> HTMLWebpackPlugin can take care of the above by adding correct
+> script tag with src as entry file configured in `webpack.config.js`
 
 ##### index.js
 - Create `index.js` in `src/` like so:
